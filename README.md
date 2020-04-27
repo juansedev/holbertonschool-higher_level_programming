@@ -1,32 +1,38 @@
 <p align="center">
-  <img src="https://www.holbertonschool.com/holberton-logo.png" width="360"/>
- <h1 align="center">0x00. Python - Hello, World</h1>
- <br>
- <p align="center">
-    <a href="https://github.com/ellerbrock/open-source-badges/">
-        <img alt="bash" src="https://badges.frapsoft.com/bash/v1/bash.png?v=103" target="_blank" />
-    </a>
-    <a href="https://github.com/EckoJuan/Readme_template/commits/master">
-        <img alt="commit_activity" src="https://img.shields.io/github/commit-activity/y/EckoJuan/Readme_template" target="_blank" />
-    </a>
-    <a href="https://github.com/EckoJuan/Readme_template/graphs/contributors">
-        <img alt="contributors" src="https://img.shields.io/github/contributors/EckoJuan/Readme_template" target="_blank" />
-    </a>
-    <a href="https://github.com/EckoJuan/Readme_template" target="_blank">
-      <img alt="code-size" src="https://img.shields.io/github/languages/code-size/EckoJuan/Readme_template" />
-    </a>
-    <a href="https://github.com/EckoJuan/Readme_template" target="_blank">
-      <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-    </a>
- </p>
+     <p align="center">
+          <img src="https://www.holbertonschool.com/holberton-logo.png" width="360"/>
+     </p>
+     <p align="center">
+          <a href="https://github.com/ellerbrock/open-source-badges/">
+               <img alt="bash" src="https://badges.frapsoft.com/bash/v1/bash.png?v=103" target="_blank" />
+          </a>
+          <a href="https://github.com/llanojs/holbertonschool-higher_level_programming/commits/master">
+               <img alt="commit_activity" src="https://img.shields.io/github/commit-activity/y/llanojs/holbertonschool-higher_level_programming" target="_blank" />
+          </a>
+          <a href="https://github.com/llanojs/holbertonschool-higher_level_programming/graphs/contributors">
+               <img alt="contributors" src="https://img.shields.io/github/contributors/llanojs/holbertonschool-higher_level_programming" target="_blank" />
+          </a>
+          <a href="https://github.com/llanojs/holbertonschool-higher_level_programming" target="_blank">
+               <img alt="code-size" src="https://img.shields.io/github/languages/code-size/llanojs/holbertonschool-higher_level_programming" />
+          </a>
+          <a href="https://github.com/llanojs/holbertonschool-higher_level_programming" target="_blank">
+               <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+          </a>
+     </p>
 </p>
+
+<h1 align="center">Higher-level programming</h1>
+
+<h2 align="center">Python </h2>
 
 ---
 
-<p align="center">
-    <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/231/48a9fdbd67c84a328a9df9ec8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg" width="360"/>
-</p>
+### :file_folder: Files / Directories 
 
+#|File|Description
+---|---|---
+1|[README.md](./README.md)|...
+2|[0x00. Python - Hello, World ](./0x00-python-hello_world)|First steps with Python 3
 
 ---
 
@@ -54,3 +60,4 @@
 **Foundations - Higher-level programming ― Python**
 
 **April, 2020.**
+
