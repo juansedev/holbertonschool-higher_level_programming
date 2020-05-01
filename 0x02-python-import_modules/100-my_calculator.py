@@ -9,6 +9,14 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     calc = 0
-    num1 = int(argv[1])
-    num2 = int(argv[3])
-    print("{} {} {} = {}".format(num1, argv[2], num2, calc))
+    a = int(argv[1])
+    b = int(argv[3])
+    if argv[2] != "+":
+        add(a, b)
+    if argv[2] != "+":
+        add(a, b)
+    if argv[2] != "+":
+        add(a, b)
+    if argv[2] != "+":
+        add(a, b)
+    print("{} {} {} = {}".format(a, argv[2], b, calc))
