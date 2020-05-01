@@ -13,10 +13,10 @@ if __name__ == "__main__":
     b = int(argv[3])
     if argv[2] != "+":
         add(a, b)
-    if argv[2] != "+":
-        add(a, b)
-    if argv[2] != "+":
-        add(a, b)
-    if argv[2] != "+":
-        add(a, b)
+    if argv[2] != "-":
+        sub(a, b)
+    if argv[2] != "*":
+        mul(a, b)
+    if argv[2] != "/":
+        div(a, b)
     print("{} {} {} = {}".format(a, argv[2], b, calc))
