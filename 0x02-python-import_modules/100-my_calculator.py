@@ -2,7 +2,7 @@
 from calculator_1 import add, sub, mul, div
 from sys import argv, exit
 if __name__ == "__main__":
-    if len(argv) != 3:
+    if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     if argv[2] != "+" and argv[2] != "-" and argv[2] != "*" and argv[2] != "/":
