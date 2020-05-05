@@ -2,7 +2,7 @@
 def replace_in_list(my_list, idx, element):
         index = 0
         lenght = len(my_list)
-        if idx < 0 or idx > lenght - 1:
+        if idx > (lenght - 1) or idx < 0:
                 return my_list
         for index in range(lenght):
                 if index == idx:
