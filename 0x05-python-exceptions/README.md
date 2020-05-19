@@ -38,6 +38,7 @@
 
 https://wiki.python.org/moin/HandlingExceptions
 https://docs.python.org/3/library/exceptions.html
+https://www.tutorialspoint.com/python3/python_exceptions.htm
 
 --
 
