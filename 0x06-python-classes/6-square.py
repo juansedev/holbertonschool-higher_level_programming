@@ -57,7 +57,8 @@ class Square:
                 value (tuple): Value of the size of the square
         """
         if type(value[0]) == int and type(value[1]) == int \
-                and len(value) is 2 and type(value) == tuple:
+                and len(value) is 2 and type(value) == tuple \
+                and value[0] > 0 and value[1] > 0:
                 self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
