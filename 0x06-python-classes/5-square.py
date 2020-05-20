@@ -9,7 +9,6 @@ class Square:
         def __init__(self, size=0):
                 """Thie __init__ method initialize a instance with a private
                 instace atributte size and validate datatype
-
                 Args:
                         size (int): Value of the size of the square
                 """
@@ -25,7 +24,6 @@ class Square:
         @size.setter
         def size(self, size):
                 """Settet method of atributte size
-
                 Args:
                         size (int): Value of the size of the square
                 """
@@ -40,7 +38,6 @@ class Square:
 
         def area(self):
                 """This method compute the value of area of a square
-
                 Returns:  area
                 """
 
