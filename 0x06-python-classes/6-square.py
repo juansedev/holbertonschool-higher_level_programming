@@ -19,7 +19,9 @@ class Square:
 
     @property
     def size(self):
-        """Getter method of atributte size"""
+        """Getter method of atributte size
+        Returns: size
+        """
 
         return self.__size
 
@@ -41,7 +43,9 @@ class Square:
 
     @property
     def position(self):
-        """Getter method of atributte position"""
+        """Getter method of atributte position
+        Returns: position
+        """
 
         return self.__position
 
@@ -56,8 +60,7 @@ class Square:
                 and len(value) is 2 and type(value) == tuple:
                 self.__position = value
         else:
-                raise TypeError("""position must be a tuple of 2
-                        positive integers""")
+                raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
         """This method compute the value of area of a square
