@@ -6,7 +6,7 @@
 
 class Square:
         """This es a class of a square"""
-        def __init__(self, size = 0):
+        def __init__(self, size=0):
                 """Thie __init__ method initialize a instance with a private
                 instace atributte size and validate datatype
 
@@ -23,7 +23,10 @@ class Square:
                         raise TypeError("size must be an integer")
 
         def area(self):
-                """This method compute the value of area of a square"""
+                """This method compute the value of area of a square
 
-                self.area = (self.__size**2)
-                return self.area
+                Returns:  area
+                """
+
+                area = self.__size ** 2
+                return area
