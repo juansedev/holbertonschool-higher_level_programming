@@ -1,0 +1,58 @@
+=======================================
+This is the doctest to 3-say_my_name.py
+=======================================
+
+Functions:
+        Function that print My name is <first_name> <last_name>
+
+Operations:
+        Both number must be strings
+
+Using ``say_my_name``
+--------------------
+
+Import the function:
+
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Starting test:
+
+Strings:
+
+Test for Strings:
+
+        >>> say_my_name("Juan", "Llano")
+        My name is Juan Llano
+
+        >>> say_my_name("Juan")
+        My name is Juan 
+
+An string a other datatype:
+
+        >>> say_my_name("Juan", 2)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+        >>> say_my_name(2, "Llano")
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+        >>> say_my_name(1)
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+Function without arguments
+
+        >>> say_my_name()
+        Traceback (most recent call last):
+        ...
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+None as an argument
+        >>> say_my_name(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string

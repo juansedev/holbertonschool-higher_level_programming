@@ -1,0 +1,123 @@
+=======================================
+This is the doctest to 0-add_integer.py
+=======================================
+
+Functions:
+        Function that sum to integers or floats
+
+Operations:
+        Both number must be int or float
+
+Using ``add_integer``
+--------------------
+
+Import the function:
+
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Starting test:
+Numbers.
+Test for integers.
+
+        >>> add_integer(1, 2)
+        3
+
+        >>> add_integer(-1, 2)
+        1
+
+        >>> add_integer(1, -2)
+        -1
+
+        >>> add_integer(-1, -8)
+        -9
+
+        >>> add_integer(5 , 4)
+        9
+
+        >>> add_integer(8, -8)
+        0
+
+Test for floats.
+
+        >>> add_integer(1.0, 2.0)
+        3
+
+        >>> add_integer(-1.0, 2.0)
+        1
+
+        >>> add_integer(1.0, -2.0)
+        -1
+
+        >>> add_integer(-1.0, -8.0)
+        -9
+
+        >>> add_integer(5.0 , 4.0)
+        9
+
+        >>> add_integer(8.0, -8.0)
+        0
+
+Only a argumen.
+
+        >>> add_integer(1)
+        99
+
+        >>> add_integer(-1)
+        97
+
+        >>> add_integer(2)
+        100
+
+Test Error Cases:
+
+Missing a argument.
+
+        >>> add_integer()
+        Traceback (most recent call last):
+        ...
+        TypeError: add_integer() missing 1 required positional argument: 'a'
+
+a argument = 'str'
+
+        >>> add_integer('1', 1)
+        Traceback (most recent call last):
+                ...
+        TypeError: a must be an integer
+
+a argument = None
+
+        >>> add_integer(None, 1)
+        Traceback (most recent call last):
+                ...
+        TypeError: a must be an integer
+
+b argument = 'str'
+
+        >>> add_integer(1, 'b')
+        Traceback (most recent call last):
+                ...
+        TypeError: b must be an integer
+
+a argument = 'list'
+
+        >>> add_integer((1,2,3), 1)
+        Traceback (most recent call last):
+                ...
+        TypeError: a must be an integer
+
+b argument = 'list'
+
+        >>> add_integer(1, (1,2,3))
+        Traceback (most recent call last):
+                ...
+        TypeError: b must be an integer
+
+        >>> add_integer(1, float("inf"))
+        Traceback (most recent call last):
+        ...
+        OverflowError: cannot convert float infinity to integer
+
+        >>> add_integer(1, float("nan"))
+        Traceback (most recent call last):
+        ...
+        ValueError: cannot convert float NaN to integer

@@ -1,0 +1,217 @@
+Trying:
+    add_integer = __import__('0-add_integer').add_integer
+Expecting nothing
+ok
+Trying:
+    add_integer(1, 2)
+Expecting:
+    3
+ok
+Trying:
+    add_integer(1, 'b')
+Expecting:
+    b must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 5, in 0-add_integer.txt
+Failed example:
+    add_integer(1, 'b')
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[2]>", line 1, in <module>
+        add_integer(1, 'b')
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+        raise TypeError("b must be an integer")
+    TypeError: b must be an integer
+Trying:
+    add_integer('a', 9)
+Expecting:
+    a must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 7, in 0-add_integer.txt
+Failed example:
+    add_integer('a', 9)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[3]>", line 1, in <module>
+        add_integer('a', 9)
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+        raise TypeError("b must be an integer")
+    TypeError: b must be an integer
+Trying:
+    add_integer()
+Expecting:
+    b must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 9, in 0-add_integer.txt
+Failed example:
+    add_integer()
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[4]>", line 1, in <module>
+        add_integer()
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+Trying:
+    add_integer(1, None)
+Expecting:
+    b must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 11, in 0-add_integer.txt
+Failed example:
+    add_integer(1, None)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[5]>", line 1, in <module>
+        add_integer(1, None)
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+        raise TypeError("b must be an integer")
+    TypeError: b must be an integer
+Trying:
+    add_integer(None, 1)
+Expecting:
+    b must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 13, in 0-add_integer.txt
+Failed example:
+    add_integer(None, 1)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[6]>", line 1, in <module>
+        add_integer(None, 1)
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+        raise TypeError("b must be an integer")
+    TypeError: b must be an integer
+Trying:
+    add_integer(5,(1,1))
+Expecting:
+    b must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 15, in 0-add_integer.txt
+Failed example:
+    add_integer(5,(1,1))
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[7]>", line 1, in <module>
+        add_integer(5,(1,1))
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+        raise TypeError("b must be an integer")
+    TypeError: b must be an integer
+Trying:
+    add_integer((1,1), 5)
+Expecting:
+    a must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 17, in 0-add_integer.txt
+Failed example:
+    add_integer((1,1), 5)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[8]>", line 1, in <module>
+        add_integer((1,1), 5)
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+        raise TypeError("b must be an integer")
+    TypeError: b must be an integer
+Trying:
+    add_integer(1.0, 2,0)
+Expecting:
+    3
+**********************************************************************
+File "./tests/0-add_integer.txt", line 19, in 0-add_integer.txt
+Failed example:
+    add_integer(1.0, 2,0)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[9]>", line 1, in <module>
+        add_integer(1.0, 2,0)
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+Trying:
+    add_integer(1, 2,0)
+Expecting:
+    3
+**********************************************************************
+File "./tests/0-add_integer.txt", line 21, in 0-add_integer.txt
+Failed example:
+    add_integer(1, 2,0)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[10]>", line 1, in <module>
+        add_integer(1, 2,0)
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+Trying:
+    add_integer(1.0, 2)
+Expecting:
+    3
+ok
+Trying:
+    add_integer(-1, 2)
+Expecting:
+    1
+ok
+Trying:
+    add_integer(1, -2)
+Expecting:
+    -1
+ok
+Trying:
+    add_integer(-1, -2)
+Expecting:
+    -3
+ok
+Trying:
+    add_integer(-1, -2)
+Expecting:
+    -3
+ok
+Trying:
+    add_integer(-1, -2)
+Expecting:
+    -3
+ok
+Trying:
+    positive_infinity = float('inf')
+Expecting nothing
+ok
+Trying:
+    negative_infinity = float('-inf')
+Expecting nothing
+ok
+Trying:
+    add_integer( positive_infinity, positive_infinity)
+Expecting:
+    a must be an integer
+**********************************************************************
+File "./tests/0-add_integer.txt", line 37, in 0-add_integer.txt
+Failed example:
+    add_integer( positive_infinity, positive_infinity)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 0-add_integer.txt[19]>", line 1, in <module>
+        add_integer( positive_infinity, positive_infinity)
+      File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 21, in add_integer
+        return int(result)
+    OverflowError: cannot convert float infinity to integer
+**********************************************************************
+1 items had failures:
+  10 of  20 in 0-add_integer.txt
+20 tests in 1 items.
+10 passed and 10 failed.
+***Test Failed*** 10 failures.
