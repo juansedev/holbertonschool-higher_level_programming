@@ -7,8 +7,8 @@
 class Square:
         """This es a class of a square"""
         def __init__(self, size=0):
-                """Thie __init__ method initialize a instance with a private
-                instace atributte size and validate datatype
+                """Thie __init__ method initialize an instance with a private
+                instance attribute size and validate datatype
 
                 Args:
                         size (int): Value of the size of the square
@@ -18,7 +18,7 @@ class Square:
 
         @property
         def size(self):
-                """Getter method of atributte size"""
+                """Size attribute getter method"""
 
                 return self.__size
 
