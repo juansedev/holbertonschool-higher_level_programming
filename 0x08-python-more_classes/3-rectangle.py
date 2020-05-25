@@ -81,10 +81,10 @@ class Rectangle:
     def __str__(self):
         if self.__width is 0 or self.__height is 0:
             return ""
-        else:
-            str_object = ""
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    str_object += "#"
+        str_object = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                str_object += "#"
+            if i < self.__height - 1:
                 str_object += "\n"
-            return str_object
+        return str_object
