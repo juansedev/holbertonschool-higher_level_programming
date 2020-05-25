@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""This mnodule define a Rectangule class
-"""
+"""This mnodule define a Rectangule class"""
 
 
 class Rectangle:
-    """This is a rectangule class
-    """
+    """This is a rectangule class"""
 
     def __init__(self, width=0, height=0):
         """This __init__ method initialize an instance with a private
@@ -24,11 +22,6 @@ class Rectangle:
         """Height attribute getter method"""
         return self.__height
 
-    @property
-    def width(self):
-        """Width attribute getter method"""
-        return self.__width
-
     @height.setter
     def height(self, height):
         """height attribute setter method
@@ -38,11 +31,16 @@ class Rectangle:
         """
         if isinstance(height, int) is True:
             if height < 0:
-                raise ValueError("width must be >= 0")
+                raise ValueError("height must be >= 0")
             else:
                     self.__height = height
         else:
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
+
+    @property
+    def width(self):
+        """Width attribute getter method"""
+        return self.__width
 
     @width.setter
     def width(self, width):
