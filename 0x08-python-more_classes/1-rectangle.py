@@ -30,7 +30,7 @@ class Rectangle:
             height {int} -- Input value of height
         """
         if isinstance(height, int) is True:
-            if height < 0:
+            if height <= 0:
                 raise ValueError("height must be >= 0")
             else:
                     self.__height = height
@@ -50,7 +50,7 @@ class Rectangle:
             width {int} -- Input value of height
         """
         if isinstance(width, int) is True:
-            if width < 0:
+            if width <= 0:
                 raise ValueError("width must be >= 0")
             else:
                     self.__width = width
