@@ -119,3 +119,14 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """This is a class method that return a new instance with attribute width
+        and height set with size value
+
+        Keyword Arguments:
+            size {int} -- is a new value to set widht and hheight
+            (default: {0})
+        """
+        return cls(size, size)
