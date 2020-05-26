@@ -7,16 +7,20 @@ class Rectangle:
     """This is a rectangule class
     """
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """This __init__ method initialize an instance with a private
         instance attributte width and height.
+
         Keyword Arguments:
             width {int} -- Input value of width (default: {0})
             height {int} -- Input value of height (default: {0})
         """
-
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -31,6 +35,7 @@ class Rectangle:
     @height.setter
     def height(self, height):
         """height attribute setter method
+
         Arguments:
             height {int} -- Input value of height
         """
@@ -45,6 +50,7 @@ class Rectangle:
     @width.setter
     def width(self, width):
         """Width attribute setter method
+
         Arguments:
             width {int} -- Input value of height
         """
@@ -58,6 +64,7 @@ class Rectangle:
 
     def area(self):
         """This method computes the value of the rectangle's area
+
         Returns:
             [int] -- Value of the compute of area
         """
@@ -65,6 +72,7 @@ class Rectangle:
 
     def perimeter(self):
         """This method computes the value of the rectangle's perimeter
+
         Returns:
             [int] -- Value of the compute of perimeter
         """
@@ -80,7 +88,7 @@ class Rectangle:
         str_object = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                str_object += "#"
+                str_object += str(self.print_symbol)
             if i < self.__height - 1:
                 str_object += "\n"
         return str_object
@@ -92,4 +100,5 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print ("Bye rectangle...")
