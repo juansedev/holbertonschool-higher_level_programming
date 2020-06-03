@@ -45,13 +45,6 @@ Starting test:
 
 Mutable objects:
 
-    >>> bg.integer_validator("width", "hola")
-    Traceback (most recent call last):
-	...
-	TypeError: Betty must be an integer
-
-Immutable objects:
-
     >>> bg.integer_validator("width", [1, 2, 3])
     Traceback (most recent call last):
 	...
@@ -62,7 +55,15 @@ Immutable objects:
 	...
 	TypeError: Betty must be an integer
 
-    >>> bg.integer_validator("width", {'a': "1", "b": "2"})
+Immutable objects:
+
+    >>> bg.integer_validator("width", "hola")
     Traceback (most recent call last):
 	...
 	TypeError: Betty must be an integer
+
+    >>> bg.integer_validator("width", (1, ))
+    Traceback (most recent call last):
+	...
+	TypeError: Betty must be an integer
+
