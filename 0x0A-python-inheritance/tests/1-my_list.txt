@@ -1,0 +1,77 @@
+=======================================
+This is the doctest to 1-my_list.py
+=======================================
+
+Functions:
+        Function that prints the list, but sorted (ascending sort)
+
+Operations:
+        Copy a list
+
+Using ``MyList``
+--------------------
+
+Import the class:
+
+        >>> MyList = MyList = __import__('1-my_list').MyList
+
+Starting test:
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted() == my_list
+    [1, 2, 3, 4, 5]
+    False
+
+Test with String:
+
+    >>> my_list = MyList("aeiou")
+
+    >>> my_list
+    ['a', 'e', 'i', 'o', 'u']
+
+    >>> my_list.print_sorted()
+    ['a', 'e', 'i', 'o', 'u']
+
+Test with an empty list:
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.print_sorted()
+    []
+
+    >>> my_list.append(2)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [2, 1]
+    >>> my_list.print_sorted()
+    [1, 2]
+
+Test with negative number:
+
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-2)
+    >>> my_list.append(-3)
+    >>> my_list.print_sorted()
+    [-3, -2, -1]
+
+Test with sorted list:
+
+    >>> my_list = MyList([1, 2, 3])
+    >>> sortedlist = my_list.print_sorted()
+    [1, 2, 3]
+    >>> print(my_list)
+    [1, 2, 3]
+    >>> my_list is sortedlist
+    False
