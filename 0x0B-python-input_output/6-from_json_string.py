@@ -14,4 +14,4 @@ def from_json_string(my_str):
     Arguments:
         my_str {[str]} -- [description]
     """
-    print(json.loads(my_str))
+    return json.loads(my_str)
