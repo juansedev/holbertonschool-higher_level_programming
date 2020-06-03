@@ -67,12 +67,11 @@ Immutable objects:
 	...
 	TypeError: Betty must be an integer
 
-    >>> bg.integer_validator("width",(float"inf")
+    >>> bg.integer_validator("width",(float"inf"))
     Traceback (most recent call last):
 	...
 	TypeError: Betty must be an integer
 
-    TypeError: age must be an integer
     >>> bg.integer_validator("Hello", True)
     Traceback (most recent call last):
     ...
