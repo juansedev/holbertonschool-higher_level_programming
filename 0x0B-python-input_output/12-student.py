@@ -17,8 +17,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if type(attrs) is not list:
-            return self.__dict__
+        s_dict = self.__dict__
 
         if type(attrs) is list and all([type(i) is str for i in attrs]):
             new_dict = {}
