@@ -11,4 +11,4 @@ def class_to_json(obj):
     Arguments:
         obj {[type]} -- object to convert
     """
-    obj.__dict__
+    return obj.__dict__
