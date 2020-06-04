@@ -24,5 +24,6 @@ class Student:
             for name in attrs:
                 if name in s_dict:
                     new_dict[name] = s_dict[name]
+            return new_dict
 
         return self.__dict__
