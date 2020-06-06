@@ -19,7 +19,7 @@ class Student:
     def to_json(self, attrs=None):
         s_dict = self.__dict__
 
-        if type(attrs) is list and all([type(i) is str for i in attrs]):
+        if type(attrs) is list and all(isinstance(items, str) for items in attrs):
             new_dict = {}
             for name in attrs:
                 if name in s_dict:

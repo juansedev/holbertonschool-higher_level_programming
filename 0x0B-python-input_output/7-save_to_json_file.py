@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""[summary]
-"""
+"""[summary]"""
+
 
 import json
 
