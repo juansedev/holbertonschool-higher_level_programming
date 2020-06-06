@@ -10,7 +10,9 @@ def pascal_triangle(n):
         n (int): n is a value for create a Pascal Trangule
     """
 
-    if n:
+    if n is 0:
+        return []
+    else:
         if n is 1:
             return [[1]]
         if n is 2:
