@@ -4,13 +4,13 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """[summary]
 
     Args:
         unittest ([type]): [description]
     """
-
 
     def empty_list(self):
         """Empty list case"""
@@ -24,9 +24,10 @@ class TestMaxInteger(unittest.TestCase):
     def number_list(self):
         """Number list cases"""
         self.assertEqual(max_integer([-3, -1, -2]), -1)
-        self.assertEqual(max_integer([8 , 4, 5, 2]), 8)
-        self.assertEqual(max_integer([-1 , 4, -3, 2]), 4)
+        self.assertEqual(max_integer([8, 4, 5, 2]), 8)
+        self.assertEqual(max_integer([-1, 4, -3, 2]), 4)
         self.assertEqual(max_integer([4, 4, 4, 4]), 4)
+
 
 if __name__ == '__main__':
     unittest.main()
