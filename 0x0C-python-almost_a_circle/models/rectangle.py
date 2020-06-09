@@ -115,9 +115,8 @@ class Rectangle(Base):
         list_attr = ["id", "widht", "height", "x", "y"]
         if args is not None and args is not ():
             """ no keyword"""
-            for index, attr_value in enumerate(args):
-                if hasattr(self, list_attr[index]):
-                    setattr(self, list_attr[index], attr_value)
+            for index in range(len(args)):
+                setattr(self, list_attr[index], args[index])
             return
         """ key and value for dictionary attributes"""
         if kwargs is not None and kwargs is not ():
