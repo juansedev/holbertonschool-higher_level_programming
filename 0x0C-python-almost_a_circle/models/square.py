@@ -46,11 +46,17 @@ class Square(Rectangle):
         """Update the argument of Square"""
         list_attr = ["id", "height", "x", "y"]
         if args is not None and args is not ():
-            """ no keyword"""
-            for index, attr_value in enumerate(args):
-                if hasattr(self, list_attr[index]):
-                    setattr(self, list_attr[index], attr_value)
-            return
+            for index, var in enumerate(args):
+                if index == 0:
+                    self.id = var
+                if index == 1:
+                    self.width = var
+                if index == 2:
+                    self.height = var
+                if index == 3:
+                    self.x = var
+                if index == 4:
+                    self.y = var
         """ key and value for dictionary attributes"""
         if kwargs is not None and kwargs is not ():
             for key, value in kwargs.items():
