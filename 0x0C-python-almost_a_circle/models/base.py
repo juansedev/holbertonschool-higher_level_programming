@@ -13,9 +13,9 @@ class Base:
     def __init__(self, id=None):
         """This is a method initializer
 
-        Args:
-            id (int, optional): value to set id of the object.
-            Defaults to None.
+            Args:
+                id (int, optional): value to set id of the object.
+                Defaults to None.
         """
         if id is None:
             Base.__nb_objects += 1
@@ -28,8 +28,8 @@ class Base:
         """Returns the JSON string representation of list_dictionaries.
            (Serialization)
 
-        Args:
-            list_dictionaries (list): A list of dictinaries
+            Args:
+                list_dictionaries (list): A list of dictinaries
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
@@ -39,8 +39,8 @@ class Base:
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation of list_objs to a file:
 
-        Args:
-            list_objs (list): A list of objects
+            Args:
+                list_objs (list): A list of objects
         """
         filename = "{}.json".format(cls.__name__)
         list_dicts = []
@@ -50,3 +50,36 @@ class Base:
             else:
                 list_dicts = [item.to_dictionary() for item in list_objs]
                 my_file.write(cls.to_json_string(list_dicts))
+
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string
+
+            Args:
+                json_string (string): a string representing a list of
+                dictionaries
+        """
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                dummy = cls(1, 1)
+            else:
+                dummy = cls(1)
+            dummy.update(**dictionary)
+            return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename, "r") as my_file:
+                l_dictionaries = Base.from_json_string(my_file.read())
+                return [cls.create(**item) for item in l_dictionaries]
+        except IOError:
+            return []
