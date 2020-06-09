@@ -114,9 +114,17 @@ class Rectangle(Base):
         """Update the argument of Rectangle"""
         list_attr = ["id", "widht", "height", "x", "y"]
         if args is not None and args is not ():
-            """ no keyword"""
-            for index in range(len(args)):
-                setattr(self, list_attr[index], args[index])
+            for index, var in enumerate(args):
+                if index == 0:
+                    self.id = var
+                if index == 1:
+                    self.width = var
+                if index == 2:
+                    self.height = var
+                if index == 3:
+                    self.x = var
+                if index == 4:
+                    self.y = var
         """no-keyword argument"""
         if kwargs is not None and kwargs is not ():
             for key, value in kwargs.items():
