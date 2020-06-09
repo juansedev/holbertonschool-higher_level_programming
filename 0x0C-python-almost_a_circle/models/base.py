@@ -18,8 +18,4 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
         else:
-            if id <= Base.__nb_objects:
-                Base.__nb_objects += 1
-                self.id = Base.__nb_objects
-            else:
-                self.id = id
+            self.id = id
