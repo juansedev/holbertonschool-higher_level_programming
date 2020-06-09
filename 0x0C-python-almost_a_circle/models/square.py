@@ -44,18 +44,16 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Update the argument of Square"""
-        list_attr = ["id", "height", "x", "y"]
+        list_attr = ["id", "size", "x", "y"]
         if args is not None and args is not ():
             for index, var in enumerate(args):
                 if index == 0:
                     self.id = var
                 if index == 1:
-                    self.width = var
+                    self.size = var
                 if index == 2:
-                    self.height = var
-                if index == 3:
                     self.x = var
-                if index == 4:
+                if index == 3:
                     self.y = var
         """ key and value for dictionary attributes"""
         if kwargs is not None and kwargs is not ():
