@@ -13,9 +13,11 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         """This method set up initial state for all test methods"""
         Base._Base__nb_objects = 0
+        #print("setUp")
 
     def tearDown(self):
         """This method to perform cleanup after each test method completes"""
+        #print("tearDown")
 
     def test_id_single(self):
         """ Test for set id function """
@@ -34,10 +36,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b0.id, 1)
         self.assertEqual(b1.id, 2)
 
-    def test_id_none(self):
-        """ Test for set id function """
-        b0 = Base(None)
-        self.assertEqual(b0.id, 1)
+
 
     def test_id_error(self):
         """ Test for set id function """
