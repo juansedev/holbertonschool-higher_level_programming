@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -81,5 +82,39 @@ class Base:
             with open(filename, "r") as my_file:
                 l_dictionaries = Base.from_json_string(my_file.read())
                 return [cls.create(**item) for item in l_dictionaries]
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ save_to_file_csv function """
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, mode='w', newline='') as file:
+            if list_objs is None or list_objs is []:
+                file.write("[]")
+            else:
+                if cls.__name__ is 'Rectangle':
+                    obj_field = ["id", "width", "height", "x", "y"]
+                if cls.__name__ is 'Square':
+                    obj_field = ["id", "size", "x", "y"]
+                doc_file = csv.DictWriter(file, fieldnames=obj_field)
+                [doc_file.writerow(item.to_dictionary()) for item in list_objs]
+
+        
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load_from_file_csv """
+        filename = '{}.csv'.format(cls.__name__)
+        try:
+            with open(filename, mode='r', newline='') as file:
+                if cls.__name__ is 'Square':
+                    obj_field = ["id", "size", "x", "y"]
+                else:
+                    obj_field = ["id", "width", "height", "x", "y"]
+                dic_list = csv.DictReader(file, fieldnames=obj_field)
+                dic_list = [{key: int(value) for key, value in dic.items()}
+                              for dic in dic_list]
+                return [cls.create(**dicts) for dicts in dic_list]
         except IOError:
             return []
