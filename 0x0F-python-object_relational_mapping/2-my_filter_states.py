@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """Module doc"""
 
+import MySQLdb
+from sys import argv
+
 
 if __name__ == "__main__":
-    """
-        Main function
-    """
-
-    import MySQLdb
-    from sys import argv
     user_db = argv[1]
     pass_db = argv[2]
     name_db = argv[3]
@@ -22,8 +19,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     query = "SELECT * \
-             FROM BINARY states \
-             WHERE name='{}' \
+             FROM states \
+             WHERE BINARY name='{}' \
              ORDER BY id ASC".format(state_name)
 
     cursor.execute(query)
