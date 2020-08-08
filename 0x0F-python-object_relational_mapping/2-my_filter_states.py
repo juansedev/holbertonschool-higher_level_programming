@@ -6,6 +6,7 @@ if __name__ == "__main__":
     """
         Main function
     """
+
     import MySQLdb
     from sys import argv
     user_db = argv[1]
