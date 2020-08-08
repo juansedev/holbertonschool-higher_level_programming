@@ -7,6 +7,13 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-if __name__ == "__main__":
 
+class State(Base):
+    """
+        State class
+    """
 
+    __tablename__ = 'states'
+
+    id = Column('id', Integer, primary_key=True, autoincrement=True)
+    name = Column('name', String(128), nullable=False)
