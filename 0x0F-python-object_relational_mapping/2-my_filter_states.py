@@ -22,7 +22,6 @@ if __name__ == "__main__":
              WHERE name='{}' \
              ORDER BY id ASC".format(state_name)
 
-    print(query)
     cursor.execute(query)
     data = cursor.fetchall()
 
