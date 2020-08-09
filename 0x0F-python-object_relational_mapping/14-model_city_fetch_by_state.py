@@ -4,9 +4,9 @@
 
 from sys import argv
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql import select
 
 
 if __name__ == "__main__":
@@ -20,10 +20,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.id == 2).first()
+    query = session.query(State, City).filter(State.id == City.state_id).all()
 
-    if state is not None:
-        state.name = 'New Mexico'
-        session.commit()
+    for state, city in query:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()

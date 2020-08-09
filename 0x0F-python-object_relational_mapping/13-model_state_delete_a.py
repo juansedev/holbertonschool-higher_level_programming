@@ -20,10 +20,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.id == 2).first()
+    query = session.query(State).filter(State.name.like('%a%')).all()
 
-    if state is not None:
-        state.name = 'New Mexico'
-        session.commit()
+    for row in query:
+        session.delete(row)
 
+    session.commit()
     session.close()
