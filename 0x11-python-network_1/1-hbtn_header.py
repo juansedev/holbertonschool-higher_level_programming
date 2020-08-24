@@ -4,10 +4,10 @@
 from urllib import request
 from sys import argv
 
-url = argv[1]
 
 if __name__ == "__main__":
-    if url is not None:
-        req = request.Request(url)
-        with request.urlopen(req) as response:
-            print(response.info()['X-Request-Id'])
+    url = argv[1]
+
+    req = request.Request(url)
+    with request.urlopen(req) as response:
+        print(response.info()['X-Request-Id'])
