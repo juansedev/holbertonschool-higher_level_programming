@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+""" Script to display an specific Header http"""
 
-from urllib import request
-from sys import argv
+import urllib.request
 
-if argv[1]:
-    url = argv[1]
-    req = request.Request(url)
-    with request.urlopen(req) as response:
-        print(response.info()['X-Request-Id'])
+
+if __name__ == "__main__":
+
+    try:
+        with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+            print("Body response:")
+            print("\t- type: {}".format(type(response.read().decode('utf-8'))))
+            print("\t- content: {}".format(response.read().decode('utf-8')))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
