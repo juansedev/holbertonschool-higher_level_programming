@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Script that fetches in a url
+
 from urllib import request
 
 req = request.Request('https://intranet.hbtn.io/status')
