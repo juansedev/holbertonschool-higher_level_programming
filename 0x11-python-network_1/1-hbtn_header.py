@@ -6,7 +6,8 @@ from sys import argv
 
 url = argv[1]
 
-if url is not None:
-    req = request.Request(url)
-    with request.urlopen(req) as response:
-        print(response.info()['X-Request-Id'])
+if __name__ == "__main__":
+    if url is not None:
+        req = request.Request(url)
+        with request.urlopen(req) as response:
+            print(response.info()['X-Request-Id'])
