@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Script to display an specific Header http
+""" Script to display an specific Header http"""
 
 import urllib.request
 import sys
