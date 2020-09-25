@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    $( '#toggle_header' ).click(function() {
-        $( 'header' ).toggleClass( 'red green' );
-      });
+document.addEventListener('DOMContentLoaded', function () {
+  $('#toggle_header').click(function () {
+    $('header').toggleClass('red green');
   });
+});
